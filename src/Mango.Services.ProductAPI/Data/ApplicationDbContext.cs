@@ -1,15 +1,16 @@
-﻿using Mango.Services.ProductAPI.Data.Entities;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.DataProtection.EntityFrameworkCore;
 
 namespace Mango.Services.ProductAPI.Data
 {
-	public class ApplicationDbContext : DbContext
+	public class ApplicationDbContext : DbContext, IDataProtectionKeyContext
 	{
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
             
         }
 
-        public DbSet<Product> Products { get; set; }
-    }
+		// Migration output folder path: -OutputDir Data\Migrations
+		public DbSet<Product> Products => Set<Product>();
+		public DbSet<DataProtectionKey> DataProtectionKeys => Set<DataProtectionKey>();
+	}
 }
