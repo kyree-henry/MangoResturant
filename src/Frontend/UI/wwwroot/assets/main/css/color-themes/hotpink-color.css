@@ -1,0 +1,219 @@
+@charset "utf-8";
+/* CSS Document */
+
+a,
+.theme_color,
+.btn-style-two,
+.btn-style-one:hover,
+.main-slider h2 span,
+.sec-title .title,
+.blog-cat li a:hover,
+.main-slider .tparrows.gyges:hover,
+.header-top .top-left ul li .icon,
+.header-top .top-left ul li.email a:hover,
+.header-top .top-right > ul > li > a > .icon,
+.header-top .top-right > ul > li > a:hover,
+.main-menu .navigation > li:hover > a,
+.main-menu .navigation > li.current > a,
+.consulting-form .inner-box .btns-box .or,
+.list-links li a:hover,
+.list-links li a:hover::before,
+.main-footer .footer-nav-links li a:hover,
+.info-list li span,
+.social-icon-two li a:hover,
+.main-footer .social-links li a:hover,
+.welcome-section .content-column .inner-column .title,
+.testimonial-block-two .inner-box .location,
+.testimonial-block-two .inner-box:hover .read,
+.news-block .inner-box .lower-content h3 a:hover,
+.news-block .inner-box .lower-content .meta span,
+.news-block .inner-box .lower-content .lower-box .read-more a:hover,
+.chef-member .inner-box .lower-content .designation,
+.delicious-block .inner-box .content-column h3 a:hover,
+.main-menu .navigation > li.current-menu-item > a,
+.banner-section .menu,
+.menu-block .inner-box h3 a:hover,
+.menu-block .inner-box .price,
+.food-item .inner-box ul li a:hover,
+.services-block .inner-box:hover h3 a,
+.services-block .inner-box:hover .icon-box,
+.breakfast-block .inner-box .content-column h3 a:hover,
+.breakfast-block .inner-box .content-column .price span,
+.delicous-section .delicous-inner .carousel-column .inner-box h2 span,
+.scroll-nav .nav li.current a, .scroll-nav .nav li a:hover,
+.gallery-section-two .filters .filter.active,
+.gallery-section-two .filters .filter:hover,
+.error-section h1,
+.cart-table tbody tr .remove-btn:hover,
+.sidebar .related-posts .post .rating .fa,
+.product-details .basic-details .details-header .rating,
+.comments-area .comment .comment-inner .rating .fa,
+.sidebar .related-posts .post a, .sidebar .related-posts .post a:hover,
+.shop-item .inner-box .lower-content .upper-box h3 a:hover,
+.shop-item .inner-box .lower-content .lower-box .add-cart:hover,
+.shop-item .inner-box .lower-content .lower-box .rating,
+.dish-item .inner-box .lower-content h3 a:hover,
+.time-counter .time-countdown .counter-column .count,
+.shop-comment-form .rating-box .rating a:hover,
+.time-counter .time-countdown .counter-column,
+.cart-table tbody tr .sub-total,
+.checkout-page .default-links li a,
+.checkout-page .check-box label,
+.checkout-page .payment-options li .radio-option label strong a,
+.fullwidth-services-two .outer-box .content-column .content-inner .service-link,
+.story-block .inner-box .content-column .inner-content h3 a:hover,
+.story-block .inner-box .content-column .inner-content .order,
+.chef-info-section .content-column .inner-column h4{
+	color:#96053e;
+}
+
+/*Background Color*/
+.btn-style-one,
+.consulting-form .inner-box .btns-box .signup-btn,
+.header-top .top-inner:before,
+.header-top .language .dropdown-menu > li > a:hover,
+.main-header .outer-box .reservation-form-btn,
+.main-menu .navigation > li > a:before,
+.main-menu .navigation > li > a:after,
+.scroll-to-top,
+.btn-style-two:hover,
+.testimonial-section,
+.food-item .inner-box .new,
+.main-slider .tparrows.gyges:hover,
+.consulting-form .inner-box .title .separator,
+.consulting-form .inner-box .title .separator:before,
+.main-footer .footer-title .separator,
+.main-footer .footer-title .separator:before,
+.main-menu .navigation > li > ul > li:hover > a,
+.ui-state-active, .ui-widget-content .ui-state-active,
+.main-menu .navigation > li > ul > li > ul > li > a:hover,
+.main-header .sticky-header .main-menu .navigation > li:hover > a,
+.main-header .sticky-header .main-menu .navigation > li.current > a,
+.testimonial-section-two .owl-dots .owl-dot:hover,
+.testimonial-section-two .owl-dots .owl-dot.active,
+.newsletter-widget .form-group input[type="submit"],
+.newsletter-widget .form-group .subscribe-btn,
+.stories-section .inner-container .stories-blocks,
+.main-header .sticky-header .main-menu .navigation > li.current-menu-item > a,
+.delicous-section .delicous-inner .carousel-column .owl-nav .owl-prev:hover,
+.delicous-section .delicous-inner .carousel-column .owl-nav .owl-next:hover,
+.gallery-block-two .overlay-inner .link,
+.dish-item .inner-box .image-box .new,
+.gallery-single .upper-content .image-info,
+.list-style-one li:before,
+.sidebar .popular-tags a:hover,
+.blog-cat li a:hover::before,
+.cart-section .coupon-outer .cart-btn:hover,
+.blog-cat li a:hover::after,
+.shop-comment-form .title-boxed .separator,
+.shop-comment-form .title-boxed .separator:before,
+.shop-item .inner-box .image .icon,
+.range-slider-one .theme-btn,
+.cart-table tbody .available-info .icon,
+.range-slider-one .ui-state-default, .range-slider-one .ui-widget-content .ui-state-default,
+.styled-pagination li a:hover, .styled-pagination li a.active,
+.comming-soon .emailed-form .form-group input[type="submit"],
+.comming-soon .emailed-form button{
+	background-color:#96053e;
+}
+
+/*Border Color*/
+
+.btn-style-one,
+.scroll-to-top,
+.btn-style-two,
+.btn-style-two:hover,
+.header-top .language .dropdown-menu,
+.main-header .search-box-outer .dropdown-menu,
+.main-header .search-panel input:focus,
+.main-header .search-panel select:focus,
+.services-block .inner-box:hover .icon-box,
+.ui-state-active, .ui-widget-content .ui-state-active,
+.reserve-form-two .form-group input[type="text"]:focus,
+.reserve-form-two .form-group input[type="password"]:focus,
+.reserve-form-two .form-group input[type="tel"]:focus,
+.reserve-form-two .form-group input[type="email"]:focus,
+.reserve-form-two .form-group select:focus,
+.reserve-form-two .form-group textarea:focus,
+.delicous-section .delicous-inner .carousel-column .owl-nav .owl-prev:hover,
+.delicous-section .delicous-inner .carousel-column .owl-nav .owl-next:hover,
+.default-form input[type="text"]:focus,
+.default-form input[type="email"]:focus,
+.default-form input[type="password"]:focus,
+.default-form input[type="number"]:focus,
+.time-counter .time-countdown .counter-column,
+.default-form select:focus,
+.default-form textarea:focus,
+.sidebar .popular-tags a:hover,
+.range-slider-one .theme-btn,
+.cart-table tbody tr .remove-btn:hover,
+.styled-pagination li a:hover, .styled-pagination li a.active,
+.range-slider-one .ui-state-default, .range-slider-one .ui-widget-content .ui-state-default,
+.fullwidth-services-two .outer-box .content-column .content-inner .service-link,
+.story-block .inner-box .content-column .inner-content .order,
+.shop-comment-form .form-group input[type="text"]:focus,
+.shop-comment-form .form-group input[type="password"]:focus,
+.shop-comment-form .form-group input[type="tel"]:focus,
+.shop-comment-form .form-group input[type="email"]:focus,
+.shop-comment-form .form-group select:focus,
+.shop-comment-form .form-group textarea:focus,
+.shipping-form .form-group input:focus,
+.shipping-form .form-group textarea:focus,
+.checkout-page .default-links li,
+.checkout-form input:focus,
+.checkout-form select:focus,
+.checkout-form textarea:focus{
+	border-color:#96053e;
+}
+
+.header-top .top-inner:after{
+	border-bottom-color:#96053e;
+}
+
+/*RGBA Color Light*/
+
+.menu-block .inner-box .image .overlay-link,
+.gallery-block .inner-box .image .overlay-box,
+.chef-member .inner-box .image-box .overlay-box .inner,
+.delicious-block .inner-box .image-column .image:before,
+.breakfast-block .inner-box .image-column .image:before{
+	background-color:rgba(150,5,62,0.70);
+}
+
+.place-section:before,
+.menu-block-two .inner-box .image .overlay-box{
+	background-color:rgba(150,5,62,0.85);
+}
+
+.dish-item .inner-box .image-box:before{
+	background-color:rgba(150,5,62,0.6);
+}
+
+/*RGBA Color Dark*/
+
+@media only screen and (max-width: 767px){
+	
+	.main-menu .navbar-header .navbar-toggle{
+		border-color:#96053e;
+	}
+	
+	.main-menu .navbar-header .navbar-toggle,
+	.main-menu .navbar-collapse > .navigation,
+	.main-menu .navbar-collapse > .navigation > li > ul,
+	.main-menu .navbar-collapse > .navigation > li > ul > li > ul,
+	.main-menu .navbar-collapse > .navigation > li > a,
+	.main-menu .navbar-collapse > .navigation > li > ul > li > a,
+	.main-menu .navbar-collapse > .navigation > li > ul > li > ul > li > a,
+	.main-menu .navbar-collapse > .navigation > li > a:hover,
+	.main-menu .navbar-collapse > .navigation > li > a:active,
+	.main-menu .navbar-collapse > .navigation > li > a:focus,
+	.main-menu .navbar-collapse > .navigation > li:hover > a,
+	.main-menu .navbar-collapse > .navigation > li > ul > li:hover > a,
+	.main-menu .navbar-collapse > .navigation > li > ul > li > ul > li:hover > a,
+	.main-menu .navbar-collapse > .navigation > li.current > a,
+	.main-menu .navbar-collapse > .navigation > li.current-menu-item > a,
+	.header-style-two.inner-header .main-menu .navigation > li > a{
+		background-color:#96053e;
+	}
+	
+}

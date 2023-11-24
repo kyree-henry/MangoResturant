@@ -1,0 +1,19 @@
+﻿@{
+    string LayoutName = "_AuthLayout";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<partial name="_HeadPartial" model="LayoutName" />
+@RenderSection("Styles", required: false)
+
+<body>
+    <div class="sign-up-top">
+        <partial name="_HeaderPartial" model="LayoutName" />
+
+        @RenderBody()
+
+    </div>
+    <partial name="_ScriptsPartial" model="LayoutName" />
+</body>
+</html>

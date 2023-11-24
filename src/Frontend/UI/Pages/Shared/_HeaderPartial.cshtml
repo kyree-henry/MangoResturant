@@ -1,0 +1,260 @@
+﻿@model string
+@{
+    if (Model == "_AuthLayout")
+    {
+        <div class="sign-up-main-two">
+            <div class="sign-up-main-two-item">
+                <div class="sign-up-img">
+                    <a href="index.html"><img src="~/assets/auth/images/thumb/login.png" alt="img"></a>
+                    <div class="sign-up-main-two-item-text"></div>
+                </div>
+            </div>
+        </div>
+    }
+    else if (Model == "_Layout")
+    {
+        <header class="main-header">
+
+            <div class="header-top">
+                <div class="auto-container">
+                    <div class="top-inner">
+                        <div class="clearfix">
+                            <div class="top-left">
+                                <ul class="clearfix">
+                                    <li><span class="fa fa-phone"></span>00-000-0000</li>
+                                    <li><span class="fa fa-phone"></span>99-999-9999</li>
+                                    <li class="email"><a href="#"><span class="icon fa fa-envelope-o"></span>helpteam@shangrila.com</a></li>
+                                </ul>
+                            </div>
+                            <div class="top-right clearfix">
+                                <ul class="clearfix">
+                                    <li><a asp-page="./Account/Login" asp-area="Identity"><span class="icon flaticon-web-log-in"></span>Sign In</a></li>
+                                    <li><a asp-page="./Account/Register" asp-area="Identity"><span class="icon flaticon-file-1"></span>Register</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-upper">
+                <div class="auto-container clearfix">
+
+                    <div class="pull-left logo-outer">
+                        <div class="logo"><a href="index.html"><img src="~/assets/main/images/logo.png" alt="" title=""></a></div>
+                    </div>
+
+                    <div class="pull-right upper-right clearfix">
+
+                        <div class="nav-outer clearfix">
+                            <nav class="main-menu navbar-expand-md">
+                                <div class="navbar-header">
+                                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                </div>
+
+                                <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
+                                    <ul class="navigation clearfix">
+                                        <li class="current dropdown">
+                                            <a href="#">Home</a>
+                                            <ul>
+                                                <li><a href="index.html">Homepage One</a></li>
+                                                <li><a href="index-2.html">Homepage Two</a></li>
+                                                <li><a href="index-3.html">Homepage Three</a></li>
+                                                <li><a href="index-4.html">Homepage Four</a></li>
+                                                <li><a href="index-5.html">Homepage Five</a></li>
+                                                <li><a href="index-6.html">Homepage Six</a></li>
+                                                <li><a href="index-7.html">Homepage Seven</a></li>
+                                                <li><a href="index-8.html">Homepage Eight</a></li>
+                                                <li><a href="index-9.html">Homepage Nine</a></li>
+                                                <li><a href="index-10.html">Homepage Ten</a></li>
+                                                <li class="dropdown">
+                                                    <a href="#">Headers Style</a>
+                                                    <ul>
+                                                        <li><a href="index.html">Header Style One</a></li>
+                                                        <li><a href="index-2.html">Header Style Two</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#">About</a>
+                                            <ul>
+                                                <li><a href="about.html">About</a></li>
+                                                <li><a href="error-page.html">Error Page</a></li>
+                                                <li><a href="comming-soon.html">Comming Soon</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#">Reservation</a>
+                                            <ul>
+                                                <li><a href="reservation.html">Reservation</a></li>
+                                                <li><a href="reservation-2.html">Reservation Two</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#">Menu</a>
+                                            <ul>
+                                                <li><a href="menu-grid.html">Menu Grid</a></li>
+                                                <li><a href="menu-list.html">Menu List</a></li>
+                                                <li><a href="menu-classic.html">Menu Classic</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#">Gallery</a>
+                                            <ul>
+                                                <li><a href="gallery.html">Gallery</a></li>
+                                                <li><a href="gallery-two.html">Gallery Two</a></li>
+                                                <li><a href="gallery-single.html">Gallery Single</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#">Blog</a>
+                                            <ul>
+                                                <li><a href="blog.html">Blog</a></li>
+                                                <li><a href="blog-single.html">Blog Single</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#">Shop</a>
+                                            <ul>
+                                                <li><a href="shop.html">Shop</a></li>
+                                                <li><a href="shop-single.html">Shop Single</a></li>
+                                                <li><a href="shoping-cart.html">Shopping Cart</a></li>
+                                                <li><a href="checkout.html">Checkout</a></li>
+                                                <li><a href="account.html">My Account</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                    </ul>
+                                </div>
+                            </nav>
+
+                            <div class="outer-box">
+                                <div class="search-box-outer">
+                                    <div class="dropdown">
+                                        <button class="search-box-btn dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="fa fa-search"></span></button>
+                                        <ul class="dropdown-menu pull-right search-panel" aria-labelledby="dropdownMenu3">
+                                            <li class="panel-outer">
+                                                <div class="form-container">
+                                                    <form method="post" action="#!">
+                                                        <div class="form-group">
+                                                            <input type="search" name="field-name" value="" placeholder="Search Here" required>
+                                                            <button type="submit" class="search-btn"><span class="fa fa-search"></span></button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="reservation-form-btn"><span class="icon flaticon-menu-options"></span></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="sticky-header">
+                <div class="auto-container clearfix">
+                    <div class="logo pull-left">
+                        <a href="index.html" class="img-responsive"><img src="images/logo-small.png" alt="" title=""></a>
+                    </div>
+
+                    <div class="right-col pull-right">
+                        <nav class="main-menu navbar-expand-md">
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+
+                            <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent1">
+                                <ul class="navigation clearfix">
+                                    <li class="current dropdown">
+                                        <a href="#">Home</a>
+                                        <ul>
+                                            <li><a href="index.html">Homepage One</a></li>
+                                            <li><a href="index-2.html">Homepage Two</a></li>
+                                            <li><a href="index-3.html">Homepage Three</a></li>
+                                            <li><a href="index-4.html">Homepage Four</a></li>
+                                            <li><a href="index-5.html">Homepage Five</a></li>
+                                            <li><a href="index-6.html">Homepage Six</a></li>
+                                            <li><a href="index-7.html">Homepage Seven</a></li>
+                                            <li><a href="index-8.html">Homepage Eight</a></li>
+                                            <li><a href="index-9.html">Homepage Nine</a></li>
+                                            <li><a href="index-10.html">Homepage Ten</a></li>
+                                            <li class="dropdown">
+                                                <a href="#">Headers Style</a>
+                                                <ul>
+                                                    <li><a href="index.html">Header Style One</a></li>
+                                                    <li><a href="index-2.html">Header Style Two</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#">About</a>
+                                        <ul>
+                                            <li><a href="about.html">About</a></li>
+                                            <li><a href="error-page.html">Error Page</a></li>
+                                            <li><a href="comming-soon.html">Comming Soon</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#">Reservation</a>
+                                        <ul>
+                                            <li><a href="reservation.html">Reservation</a></li>
+                                            <li><a href="reservation-2.html">Reservation Two</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#">Menu</a>
+                                        <ul>
+                                            <li><a href="menu-grid.html">Menu Grid</a></li>
+                                            <li><a href="menu-list.html">Menu List</a></li>
+                                            <li><a href="menu-classic.html">Menu Classic</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#">Gallery</a>
+                                        <ul>
+                                            <li><a href="gallery.html">Gallery</a></li>
+                                            <li><a href="gallery-two.html">Gallery Two</a></li>
+                                            <li><a href="gallery-single.html">Gallery Single</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#">Blog</a>
+                                        <ul>
+                                            <li><a href="blog.html">Blog</a></li>
+                                            <li><a href="blog-single.html">Blog Single</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#">Shop</a>
+                                        <ul>
+                                            <li><a href="shop.html">Shop</a></li>
+                                            <li><a href="shop-single.html">Shop Single</a></li>
+                                            <li><a href="shoping-cart.html">Shopping Cart</a></li>
+                                            <li><a href="checkout.html">Checkout</a></li>
+                                            <li><a href="account.html">My Account</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+
+                </div>
+            </div>
+
+        </header>
+    }
+}

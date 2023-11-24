@@ -1,0 +1,23 @@
+﻿@{
+    string LayoutName = "_Layout";
+}
+<!DOCTYPE html>
+<html lang="en">
+<partial name="_HeadPartial" model="LayoutName" />
+@RenderSection("Styles", required: false)
+
+<body>
+    <div class="page-wrapper">
+        <div class="preloader"></div>
+        <partial name="_HeaderPartial" model="LayoutName" />
+
+        @RenderBody()
+
+        @* <partial name="_FooterPartial" /> *@
+    </div>
+    <div class="scroll-to-top scroll-to-target" data-target="html"><span class="icon fa fa-angle-double-up"></span></div>
+    <partial name="_ScriptsPartial" model="LayoutName" />
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

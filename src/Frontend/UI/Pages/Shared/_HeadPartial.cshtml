@@ -1,0 +1,30 @@
+﻿@model string
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] - Mango Restaurant </title>
+
+    <link rel="shortcut icon" href="assets/images/icon/fave.png" type="image/png">
+    <link rel="stylesheet" href="~/assets/auth/css/bootstrap.min.css">
+
+    @{
+        if (Model == "_AuthLayout")
+        {
+            <link rel="stylesheet" href="~/assets/auth/css/venobox.min.css">
+            <link rel="stylesheet" href="~/assets/auth/css/aos.css">
+            <link rel="stylesheet" href="~/assets/auth/css/slick.css">
+            <link rel="stylesheet" href="~/assets/auth/css/style.css">
+            <link rel="stylesheet" href="~/assets/auth/css/responsive.css">
+        }
+        else if (Model == "_Layout")
+        {
+            <link href="~/assets/main/css/style.css" rel="stylesheet">
+            <link href="~/assets/main/css/responsive.css" rel="stylesheet">
+            <link id="theme-color-file" href="~/assets/main/css/color-themes/default-theme.css" rel="stylesheet">
+        }
+    }
+
+    <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+    <!--[if lt IE 9]><script src="~/assets/main/js/respond.js"></script><![endif]-->
+</head>
