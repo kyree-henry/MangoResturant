@@ -1,5 +1,4 @@
-﻿using Mango.UI.Contracts.ProductContract;
-using Mango.UI.Services;
+﻿using Mango.UI.Data.Contracts.ProductContract;
 using Mango_Web.Services;
 using Refit;
 
@@ -11,7 +10,7 @@ namespace Mango.UI.Services.Abstracts
         Task<ServiceResponse<List<ProductModel>>> GetAllProductsAsync();
 
         [Get(ApiRoutes.Product.GetProductById)]
-        Task<ServiceResponse<ProductModel>> GetProductByIdAsync();
+        Task<ServiceResponse<ProductModel>> GetProductByIdAsync(Guid productId);
 
         [Post(ApiRoutes.Product.CreateProduct)]
         Task<ServiceResponse<ProductModel>> CreateProductAsync(CreateProductModel data);

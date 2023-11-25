@@ -4,11 +4,11 @@
 	{
 		public static class Product
 		{
-			public const string GetAllProducts = "";
-			public const string GetProductById = "";
-			public const string CreateProduct = "";
-			public const string UpdateProduct = "";
-			public const string DeleteProduct = "";
+			public const string GetAllProducts = "/Product";
+			public const string GetProductById = "/Product/{productId}";
+			public const string CreateProduct = "/Product";
+			public const string UpdateProduct = "/Product";
+			public const string DeleteProduct = "/Product/{ProductId}";
 		}
 
 	}

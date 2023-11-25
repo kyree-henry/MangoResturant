@@ -1,4 +1,4 @@
-﻿namespace Mango.UI.Contracts.ProductContract
+﻿namespace Mango.UI.Data.Contracts.ProductContract
 {
     public record CreateProductModel
     {

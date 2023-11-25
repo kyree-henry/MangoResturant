@@ -1,4 +1,5 @@
-﻿using Mango.UI.Services;
+﻿using Mango.UI.Data.Entities;
+using Mango.UI.Services;
 using Newtonsoft.Json.Converters;
 using System.Text.Json.Serialization;
 
@@ -14,6 +15,14 @@ namespace Mango.UI.Register
                  opt.AllowAnyOrigin()
                  .AllowAnyHeader()
                  .AllowAnyMethod());
+            });
+
+            builder.Services.AddScoped<HttpClientLoggingHandler>();
+            builder.Services.Configure<ServiceUrls>(builder.Configuration.GetSection("ServiceUrls"));
+
+            builder.Services.AddLogging(policy =>
+            {
+                policy.AddConsole();
             });
 
             builder.Services.AddRazorPages().AddNewtonsoftJson(option =>

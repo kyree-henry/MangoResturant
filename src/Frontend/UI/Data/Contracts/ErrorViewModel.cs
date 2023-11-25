@@ -1,4 +1,4 @@
-namespace Mango.UI.Contracts
+namespace Mango.UI.Data.Contracts
 {
     public class ErrorViewModel
     {
