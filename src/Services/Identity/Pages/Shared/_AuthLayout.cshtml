@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com">
+
+
+    <link rel="stylesheet" type="text/css" href="~/assets/vendors/bootstrap-5.3.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/auth/css/fontawesome-all.min.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/auth/css/iofrm-style.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/auth/css/iofrm-theme27.css" asp-append-version="true">
+
+    <link rel="stylesheet" href="~/formhelper/formhelper.min.css" />
+    <link rel="stylesheet" href="~/formhelper/jquery.toast.min.css" />
+    @RenderSection("Styles", required: false)
+
+    <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+    <!--[if lt IE 9]><script src="~/assets/main/js/respond.js"></script><![endif]-->
+</head>
+
+<body>
+    <div class="form-body without-side">
+        <div class="website-logo">
+            <a href="index.html">
+                <div class="logo">
+                    <img class="logo-size" src="~/assets/auth/images/logo-light.svg" asp-append-version="true" />
+                </div>
+            </a>
+        </div>
+
+        <div class="row">
+            <div class="img-holder">
+                <div class="bg"></div>
+                <div class="info-holder">
+                    <img src="~/assets/auth/images/graphic8.svg" alt="">
+                </div>
+            </div>
+            @RenderBody()
+        </div>
+    </div>
+    <script src="~/assets/vendors/jquery/dist/jquery.min.js"></script>
+    <script src="~/assets/vendors/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="~/assets/auth/js/popper.min.js"></script>
+    <script src="~/formhelper/formhelper.bundle.min.js"></script>
+    <script src="~/formhelper/jquery.toast.min.js"></script>
+    <script src="~/formhelper/jquerytoast.js" asp-append-version="true"></script>
+    <script src="~/assets/vendors/bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/assets/vendors/validator/hsvalidate.js"></script>
+
+    <script asp-append-version="true">
+        HSBsValidation.init('.validate-js');
+    </script>
+</body>
+</html>

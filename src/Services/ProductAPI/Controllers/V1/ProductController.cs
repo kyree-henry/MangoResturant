@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Mango.Services.ProductAPI.Controllers.V1
 {
@@ -64,6 +65,7 @@ namespace Mango.Services.ProductAPI.Controllers.V1
 		}
 
 		[HttpPost]
+		[Authorize]
 		public async Task<IActionResult> PostAsync([FromBody] CreateProductModel data)
 		{
 			try
@@ -89,6 +91,7 @@ namespace Mango.Services.ProductAPI.Controllers.V1
 		}
 
 		[HttpPut]
+		[Authorize]
 		public async Task<IActionResult> PutAysnc([FromBody] UpdateProductModel data)
 		{
 			try
@@ -113,6 +116,7 @@ namespace Mango.Services.ProductAPI.Controllers.V1
 			return BadRequest(_response);
 		}
 
+		[Authorize]
 		[HttpDelete]
 		[Route("{productId}")]
 		public async Task<IActionResult> DeleteAsync([FromQuery] Guid productId)

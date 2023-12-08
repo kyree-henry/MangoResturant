@@ -3,12 +3,14 @@
 // See LICENSE in the project root for license information.
 
 
-namespace MangoResturant.Pages.Logout;
-
-public class LoggedOutViewModel
+namespace Mango.Services.Identity.Pages.Logout
 {
-    public string PostLogoutRedirectUri { get; set; }
-    public string ClientName { get; set; }
-    public string SignOutIframeUrl { get; set; }
-    public bool AutomaticRedirectAfterSignOut { get; set; }
+    public class LoggedOutViewModel
+    {
+        public string? PostLogoutRedirectUri { get; set; }
+        public string? ClientName { get; set; }
+        public string? SignOutIframeUrl { get; set; }
+        public bool AutomaticRedirectAfterSignOut { get; set; }
+    }
 }
+

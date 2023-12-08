@@ -1,8 +1,10 @@
 
-namespace MangoResturant.Pages.Logout;
-
-public class LogoutOptions
+namespace Mango.Services.Identity.Pages.Logout
 {
-    public static bool ShowLogoutPrompt = true;
-    public static bool AutomaticRedirectAfterSignOut = false;
+    public class LogoutOptions
+    {
+        public static bool ShowLogoutPrompt = true;
+        public static bool AutomaticRedirectAfterSignOut = false;
+    }
 }
+

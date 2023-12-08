@@ -4,20 +4,22 @@
 
 using System.ComponentModel.DataAnnotations;
 
-namespace MangoResturant.Pages.Create;
-
-public class InputModel
+namespace Mango.Services.Identity.Pages.Create
 {
-    [Required]
-    public string Username { get; set; }
+    public class InputModel
+    {
+        [Required]
+        public string Username { get; set; }
 
-    [Required]
-    public string Password { get; set; }
+        [Required]
+        public string Password { get; set; }
 
-    public string Name { get; set; }
-    public string Email { get; set; }
+        public string Name { get; set; }
+        public string Email { get; set; }
 
-    public string ReturnUrl { get; set; }
+        public string ReturnUrl { get; set; }
 
-    public string Button { get; set; }
+        public string Button { get; set; }
+    }
+
 }

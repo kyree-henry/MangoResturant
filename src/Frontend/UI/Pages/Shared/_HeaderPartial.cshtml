@@ -2,14 +2,7 @@
 @{
     if (Model == "_AuthLayout")
     {
-        <div class="sign-up-main-two">
-            <div class="sign-up-main-two-item">
-                <div class="sign-up-img">
-                    <a href="index.html"><img src="~/assets/auth/images/thumb/login.png" alt="img"></a>
-                    <div class="sign-up-main-two-item-text"></div>
-                </div>
-            </div>
-        </div>
+
     }
     else if (Model == "_Layout")
     {
@@ -28,8 +21,17 @@
                             </div>
                             <div class="top-right clearfix">
                                 <ul class="clearfix">
-                                    <li><a asp-page="./Account/Login" asp-area="Identity"><span class="icon flaticon-web-log-in"></span>Sign In</a></li>
-                                    <li><a asp-page="./Account/Register" asp-area="Identity"><span class="icon flaticon-file-1"></span>Register</a></li>
+
+                                    @if (User.Identity!.IsAuthenticated)
+                                    {
+                                        <li><a asp-page="./Account/Logout" asp-area="Identity"><span class="icon flaticon-web-log-in"></span>Logout</a></li>
+                                    }
+                                    else
+                                    {
+                                        <li><a asp-page="./Account/Login" asp-area="Identity"><span class="icon flaticon-web-log-in"></span>Sign In</a></li>
+                                        <li><a asp-page="./Account/Register" asp-area="Identity"><span class="icon flaticon-file-1"></span>Register</a></li>
+                                    }
+
                                 </ul>
                             </div>
                         </div>

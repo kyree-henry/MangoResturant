@@ -7,24 +7,25 @@ using Microsoft.AspNetCore.Authentication;
 using System.Text;
 using System.Text.Json;
 
-namespace MangoResturant.Pages.Diagnostics;
-
-public class ViewModel
+namespace Mango.Services.Identity.Pages.Diagnostics
 {
-    public ViewModel(AuthenticateResult result)
+    public class ViewModel
     {
-        AuthenticateResult = result;
-
-        if (result.Properties.Items.ContainsKey("client_list"))
+        public ViewModel(AuthenticateResult result)
         {
-            var encoded = result.Properties.Items["client_list"];
-            var bytes = Base64Url.Decode(encoded);
-            var value = Encoding.UTF8.GetString(bytes);
+            AuthenticateResult = result;
 
-            Clients = JsonSerializer.Deserialize<string[]>(value);
+            if (result.Properties.Items.ContainsKey("client_list"))
+            {
+                var encoded = result.Properties.Items["client_list"];
+                var bytes = Base64Url.Decode(encoded);
+                var value = Encoding.UTF8.GetString(bytes);
+
+                Clients = JsonSerializer.Deserialize<string[]>(value);
+            }
         }
-    }
 
-    public AuthenticateResult AuthenticateResult { get; }
-    public IEnumerable<string> Clients { get; } = new List<string>();
+        public AuthenticateResult AuthenticateResult { get; }
+        public IEnumerable<string> Clients { get; } = new List<string>();
+    }
 }

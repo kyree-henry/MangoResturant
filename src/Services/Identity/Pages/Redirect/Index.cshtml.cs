@@ -2,21 +2,23 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace MangoResturant.Pages.Redirect;
-
-[AllowAnonymous]
-public class IndexModel : PageModel
+namespace Mango.Services.Identity.Pages.Redirect
 {
-    public string RedirectUri { get; set; }
-
-    public IActionResult OnGet(string redirectUri)
+    [AllowAnonymous]
+    public class IndexModel : PageModel
     {
-        if (!Url.IsLocalUrl(redirectUri))
-        {
-            return RedirectToPage("/Home/Error/Index");
-        }
+        public string RedirectUri { get; set; }
 
-        RedirectUri = redirectUri;
-        return Page();
+        public IActionResult OnGet(string redirectUri)
+        {
+            if (!Url.IsLocalUrl(redirectUri))
+            {
+                return RedirectToPage("/Home/Error/Index");
+            }
+
+            RedirectUri = redirectUri;
+            return Page();
+        }
     }
+
 }

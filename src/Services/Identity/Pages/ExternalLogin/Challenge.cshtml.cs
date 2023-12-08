@@ -1,45 +1,47 @@
 using Duende.IdentityServer.Services;
+using Mango.Services.Identity.Data.Core;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace MangoResturant.Pages.ExternalLogin;
-
-[AllowAnonymous]
-[SecurityHeaders]
-public class Challenge : PageModel
+namespace Mango.Services.Identity.Pages.ExternalLogin
 {
-    private readonly IIdentityServerInteractionService _interactionService;
-
-    public Challenge(IIdentityServerInteractionService interactionService)
+    [AllowAnonymous]
+    [SecurityHeaders]
+    public class Challenge : PageModel
     {
-        _interactionService = interactionService;
-    }
-        
-    public IActionResult OnGet(string scheme, string returnUrl)
-    {
-        if (string.IsNullOrEmpty(returnUrl)) returnUrl = "~/";
+        private readonly IIdentityServerInteractionService _interactionService;
 
-        // validate returnUrl - either it is a valid OIDC URL or back to a local page
-        if (Url.IsLocalUrl(returnUrl) == false && _interactionService.IsValidReturnUrl(returnUrl) == false)
+        public Challenge(IIdentityServerInteractionService interactionService)
         {
-            // user might have clicked on a malicious link - should be logged
-            throw new Exception("invalid return URL");
+            _interactionService = interactionService;
         }
-            
-        // start challenge and roundtrip the return URL and scheme 
-        var props = new AuthenticationProperties
+        
+        public IActionResult OnGet(string scheme, string returnUrl)
         {
-            RedirectUri = Url.Page("/externallogin/callback"),
-                
-            Items =
-            {
-                { "returnUrl", returnUrl }, 
-                { "scheme", scheme },
-            }
-        };
+            if (string.IsNullOrEmpty(returnUrl)) returnUrl = "~/";
 
-        return Challenge(props, scheme);
+            // validate returnUrl - either it is a valid OIDC URL or back to a local page
+            if (Url.IsLocalUrl(returnUrl) == false && _interactionService.IsValidReturnUrl(returnUrl) == false)
+            {
+                // user might have clicked on a malicious link - should be logged
+                throw new Exception("invalid return URL");
+            }
+            
+            // start challenge and roundtrip the return URL and scheme 
+            var props = new AuthenticationProperties
+            {
+                RedirectUri = Url.Page("/externallogin/callback"),
+                
+                Items =
+                {
+                    { "returnUrl", returnUrl }, 
+                    { "scheme", scheme },
+                }
+            };
+
+            return Challenge(props, scheme);
+        }
     }
 }

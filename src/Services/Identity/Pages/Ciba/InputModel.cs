@@ -1,12 +1,18 @@
 // Copyright (c) Duende Software. All rights reserved.
 // See LICENSE in the project root for license information.
 
-namespace MangoResturant.Pages.Ciba;
-
-public class InputModel
+namespace Mango.Services.Identity.Pages.Ciba
 {
-    public string Button { get; set; }
-    public IEnumerable<string> ScopesConsented { get; set; }
-    public string Id { get; set; }
-    public string Description { get; set; }
+    public class InputModel
+    {
+        public InputModel()
+        {
+            ScopesConsented = new List<string>();
+        }
+
+        public string Button { get; set; }
+        public IEnumerable<string> ScopesConsented { get; set; }
+        public string Id { get; set; }
+        public string Description { get; set; }
+    }
 }

@@ -2,25 +2,27 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Authorization;
+using Mango.Services.Identity.Data.Core;
 
-namespace MangoResturant.Pages.Diagnostics;
-
-[SecurityHeaders]
-[Authorize]
-public class Index : PageModel
+namespace Mango.Services.Identity.Pages.Diagnostics
 {
-    public ViewModel View { get; set; }
-        
-    public async Task<IActionResult> OnGet()
+    [SecurityHeaders]
+    [Authorize]
+    public class Index : PageModel
     {
-        var localAddresses = new string[] { "127.0.0.1", "::1", HttpContext.Connection.LocalIpAddress.ToString() };
-        if (!localAddresses.Contains(HttpContext.Connection.RemoteIpAddress.ToString()))
+        public ViewModel View { get; set; }
+        
+        public async Task<IActionResult> OnGet()
         {
-            return NotFound();
-        }
+            var localAddresses = new string[] { "127.0.0.1", "::1", HttpContext.Connection.LocalIpAddress.ToString() };
+            if (!localAddresses.Contains(HttpContext.Connection.RemoteIpAddress?.ToString()))
+            {
+                return NotFound();
+            }
 
-        View = new ViewModel(await HttpContext.AuthenticateAsync());
+            View = new ViewModel(await HttpContext.AuthenticateAsync());
             
-        return Page();
+            return Page();
+        }
     }
 }

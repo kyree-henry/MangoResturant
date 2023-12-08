@@ -4,32 +4,35 @@
 using System.ComponentModel.DataAnnotations;
 using Duende.IdentityServer.Models;
 using Duende.IdentityServer.Services;
+using Mango.Services.Identity.Data.Core;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace MangoResturant.Pages.Ciba;
-
-[SecurityHeaders]
-[Authorize]
-public class AllModel : PageModel
+namespace Mango.Services.Identity.Pages.Ciba
 {
-    public IEnumerable<BackchannelUserLoginRequest> Logins { get; set; }
-
-    [BindProperty, Required]
-    public string Id { get; set; }
-    [BindProperty, Required]
-    public string Button { get; set; }
-
-    private readonly IBackchannelAuthenticationInteractionService _backchannelAuthenticationInteraction;
-
-    public AllModel(IBackchannelAuthenticationInteractionService backchannelAuthenticationInteractionService)
+    [SecurityHeaders]
+    [Authorize]
+    public class AllModel : PageModel
     {
-        _backchannelAuthenticationInteraction = backchannelAuthenticationInteractionService;
-    }
+        public IEnumerable<BackchannelUserLoginRequest> Logins { get; set; }
 
-    public async Task OnGet()
-    {
-        Logins = await _backchannelAuthenticationInteraction.GetPendingLoginRequestsForCurrentUserAsync();
+        [BindProperty, Required]
+        public string Id { get; set; }
+        [BindProperty, Required]
+        public string Button { get; set; }
+
+        private readonly IBackchannelAuthenticationInteractionService _backchannelAuthenticationInteraction;
+
+        public AllModel(IBackchannelAuthenticationInteractionService backchannelAuthenticationInteractionService)
+        {
+            _backchannelAuthenticationInteraction = backchannelAuthenticationInteractionService;
+        }
+
+        public async Task OnGet()
+        {
+            Logins = await _backchannelAuthenticationInteraction.GetPendingLoginRequestsForCurrentUserAsync();
+        }
     }
 }
+

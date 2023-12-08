@@ -19,7 +19,26 @@ namespace Mango.Services.ProductAPI.Register
 			builder.Services.AddControllers().AddNewtonsoftJson(option =>
 			{
 				option.SerializerSettings.Converters.Add(new StringEnumConverter());
-				//option.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+			});
+
+
+			builder.Services.AddAuthentication("Bearer").AddJwtBearer("Bearer", options =>
+			{
+				options.Authority = builder.Configuration.GetSection("AuthSettings")["Authority"];
+				options.TokenValidationParameters = new()
+				{
+					ValidateAudience = false
+                };
+			});
+
+            // Add Authorization Policy => ApiScope
+            builder.Services.AddAuthorization(options =>
+			{
+				options.AddPolicy("ApiScope", policy =>
+				{
+					policy.RequireAuthenticatedUser();
+					policy.RequireClaim("Scope", "mango");
+				});
 			});
 
 			builder.Services.AddApiVersioning(options =>

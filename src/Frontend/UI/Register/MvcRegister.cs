@@ -1,5 +1,4 @@
-﻿using Mango.UI.Data.Entities;
-using Mango.UI.Services;
+﻿using Mango.UI.Services;
 using Newtonsoft.Json.Converters;
 using System.Text.Json.Serialization;
 
@@ -25,13 +24,31 @@ namespace Mango.UI.Register
                 policy.AddConsole();
             });
 
+            builder.Services.AddAuthentication(policy =>
+            {
+                policy.DefaultScheme = "Cookies";
+                policy.DefaultChallengeScheme = "oidc";
+            }).AddCookie("Cookies", policy =>
+            {
+                policy.ExpireTimeSpan = TimeSpan.FromMinutes(10);
+            }).AddOpenIdConnect("oidc", policy =>
+            {
+                policy.Authority = builder.Configuration.GetSection("ServiceUrls")["IdentityAPI"];
+                policy.GetClaimsFromUserInfoEndpoint = true;
+                policy.ClientId = "mango";
+                policy.ClientSecret = "qwertySecret";
+                policy.ResponseType = "code";
+
+                policy.TokenValidationParameters.NameClaimType = "name";
+                policy.TokenValidationParameters.RoleClaimType = "role";
+                policy.Scope.Add("mango");
+                policy.SaveTokens = true;
+            });
+
             builder.Services.AddRazorPages().AddNewtonsoftJson(option =>
             {
                 option.SerializerSettings.Converters.Add(new StringEnumConverter());
-                //option.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
-            });;
-
-            builder.Services.AddRazorPages().AddJsonOptions(
+            }).AddJsonOptions(
                 options => options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()))
                 .AddRazorRuntimeCompilation();
 

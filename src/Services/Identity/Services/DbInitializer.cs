@@ -61,7 +61,7 @@ namespace Mango.Services.Identity.Services
         {
             return await _userManager.AddClaimsAsync(applicationUser, new Claim[]
             {
-                new(JwtClaimTypes.Name, applicationUser.FullNames),
+                new(JwtClaimTypes.Name, applicationUser.UserName!),
                 new(JwtClaimTypes.GivenName, applicationUser.FirstName!),
                 new(JwtClaimTypes.FamilyName, applicationUser.LastName!),
                 new(JwtClaimTypes.Role, roleName)

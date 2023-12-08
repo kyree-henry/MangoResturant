@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc.ApiExplorer;
+﻿using FormHelper;
+using Microsoft.AspNetCore.Mvc.ApiExplorer;
 
 namespace Mango.Services.Identity.Register
 {
@@ -7,10 +8,11 @@ namespace Mango.Services.Identity.Register
 		public void RegisterPiplineComponent(WebApplication app)
 		{
 			app.UseHttpsRedirection();
-
-			app.UseRouting();
+            app.UseStaticFiles();
+            app.UseRouting();
 			app.UseIdentityServer();
 			app.UseAuthorization();
+			app.UseFormHelper();
 
 			app.UseCors("OpenCorsPolicy");
             app.MapRazorPages();

@@ -1,4 +1,6 @@
-﻿using Mango.Services.Identity.Services;
+﻿using Duende.IdentityServer.Services;
+using FormHelper;
+using Mango.Services.Identity.Services;
 using Mango.Services.Identity.Services.Abstracts;
 using System.Text.Json.Serialization;
 
@@ -16,12 +18,10 @@ namespace Mango.Services.Identity.Register
 				 .AllowAnyMethod());
 			});
 
-            builder.Services.AddRazorPages();
+            builder.Services.AddRazorPages().AddJsonOptions(
+				options => options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter())).AddFormHelper();
 			builder.Services.AddScoped<IDbInitializer, DbInitializer>();
-
-			builder.Services.AddRazorPages().AddJsonOptions(
-				options => options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()));
-                
+			builder.Services.AddScoped<IProfileService, ProfileService>();
             builder.Services.AddEndpointsApiExplorer();
 		}
 	}

@@ -1,0 +1,63 @@
+﻿@page
+@model Mango.Services.Identity.Pages.Account.Register.Index
+@{
+    ViewData["Title"] = "Register";
+}
+
+<div class="form-holder">
+    <div class="form-content">
+
+        <div class="form-items">
+            <div class="mb-5 text-center">
+                <h5 class="form-title-center">Create a new account</h5>
+            </div>
+            <partial name="_ValidationSummary" />
+            <form method="post">
+                <input type="hidden" asp-for="Input.ReturnUrl" />
+
+                <div class="form-floating mb-3">
+                    <input class="form-control" required placeholder="" asp-for="Input.FirstName" />
+                    <label asp-for="Input.FirstName"></label>
+                    <span class="small error-message" asp-validation-for="Input.FirstName" />
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input class="form-control" required placeholder="" asp-for="Input.LastName" />
+                    <label asp-for="Input.LastName"></label>
+                    <span class="small error-message" asp-validation-for="Input.LastName" />
+                </div>
+                
+                <div class="form-floating mb-3">
+                    <input class="form-control" required placeholder="" asp-for="Input.Email" />
+                    <label asp-for="Input.Email"></label>
+                    <span class="small error-message" asp-validation-for="Input.Email" />
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input class="form-control" placeholder="" asp-for="Input.Password" />
+                    <label asp-for="Input.Password">Password</label>
+                    <span class="small error-message" asp-validation-for="Input.Password" />
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input class="form-control" placeholder="" asp-for="Input.ConfirmPassword" />
+                    <label>Confirm Password</label>
+                    <span class="small error-message" asp-validation-for="Input.ConfirmPassword" />
+                </div>
+
+                <div class="d-grid gap-2 mt-4">
+                    <button class="btn btn-success btn-lg" name="Input.Button" value="Register">Register</button>
+                </div>
+               
+                <div class="d-flex justify-content-center mb-3 mt-3">
+                    <span class="text-muted text-center">or</span>
+                </div>
+
+                <div class="d-flex mb-5 justify-content-center">
+                    <a class="link-underline link-underline-opacity-0" asp-page="/Account/Login/Index" asp-route-returnUrl="@Model.Input.ReturnUrl">Already have an account? Login</a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

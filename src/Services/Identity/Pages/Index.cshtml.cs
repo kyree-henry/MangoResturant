@@ -2,15 +2,16 @@ using System.Reflection;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace MangoResturant.Pages.Home;
-
-[AllowAnonymous]
-public class Index : PageModel
+namespace Mango.Services.Identity.Pages
 {
-    public string Version;
-        
-    public void OnGet()
+    [AllowAnonymous]
+    public class Index : PageModel
     {
-        Version = typeof(Duende.IdentityServer.Hosting.IdentityServerMiddleware).Assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion.Split('+').First();
+        public string Version;
+
+        public void OnGet()
+        {
+            Version = typeof(Duende.IdentityServer.Hosting.IdentityServerMiddleware).Assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion.Split('+').First();
+        }
     }
 }

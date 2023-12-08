@@ -31,7 +31,7 @@ namespace Mango.Services.Identity.Data.Core
             new()
             {
                 ClientId = "client",
-                ClientSecrets = { new Secret("qwertySecret".ToSha256() ) },
+                ClientSecrets = { new Secret("c".ToSha256() ) },
                 AllowedGrantTypes =  GrantTypes.ClientCredentials,
                 AllowedScopes = { "read", "write", "profile" }
             },

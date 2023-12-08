@@ -1,13 +1,15 @@
+using Mango.Services.Identity.Data.Core;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace MangoResturant.Pages.Device;
-
-[SecurityHeaders]
-[Authorize]
-public class SuccessModel : PageModel
+namespace Mango.Services.Identity.Pages.Device
 {
-    public void OnGet()
+    [SecurityHeaders]
+    [Authorize]
+    public class SuccessModel : PageModel
     {
+        public void OnGet()
+        {
+        }
     }
 }
