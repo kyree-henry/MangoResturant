@@ -4,6 +4,7 @@ using Refit;
 
 namespace Mango.UI.Services.Abstracts
 {
+    [Headers("Authorization: Bearer")]
     public interface IProduct
     {
         [Get(ApiRoutes.Product.GetAllProducts)]

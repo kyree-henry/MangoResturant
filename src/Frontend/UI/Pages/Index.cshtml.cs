@@ -29,7 +29,7 @@ namespace Mango.UI.Pages
             catch (ApiException ex)
             {
                 _logger.LogError(ex, ex.Message);
-            }
+            } 
             catch (Exception ex)
             {
                 _logger.LogError(ex, ex.Message);

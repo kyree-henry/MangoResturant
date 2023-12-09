@@ -16,9 +16,9 @@ namespace Mango.UI.Register
                  .AllowAnyMethod());
             });
 
+            builder.Services.AddHttpContextAccessor();
             builder.Services.AddScoped<HttpClientLoggingHandler>();
             builder.Services.Configure<ServiceUrls>(builder.Configuration.GetSection("ServiceUrls"));
-
             builder.Services.AddLogging(policy =>
             {
                 policy.AddConsole();
