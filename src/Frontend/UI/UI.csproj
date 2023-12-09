@@ -27,6 +27,8 @@
   <ItemGroup>
     <Folder Include="Data\MappingProfiles\" />
     <Folder Include="Data\Migrations\" />
+    <Folder Include="wwwroot\assets\main\" />
+    <Folder Include="wwwroot\assets\occ\" />
   </ItemGroup>
 
   <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="https://json.schemastore.org/asconfig-schema.json" /></VisualStudio></ProjectExtensions>

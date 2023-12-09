@@ -1,0 +1,179 @@
+@font-face {
+    font-family: "flaticon_swigo";
+    src: url("flaticon_swigo1845.ttf?64497de560921368cd586e6c5ea1ea6e") format("truetype"),
+url("flaticon_swigo1845.woff?64497de560921368cd586e6c5ea1ea6e") format("woff"),
+url("flaticon_swigo1845.woff2?64497de560921368cd586e6c5ea1ea6e") format("woff2"),
+url("flaticon_swigo1845.eot?64497de560921368cd586e6c5ea1ea6e#iefix") format("embedded-opentype"),
+url("flaticon_swigo1845.svg?64497de560921368cd586e6c5ea1ea6e#flaticon_swigo") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon_swigo !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-wine:before {
+    content: "\f101";
+}
+.flaticon-mirror-ball:before {
+    content: "\f102";
+}
+.flaticon-party:before {
+    content: "\f103";
+}
+.flaticon-play-button:before {
+    content: "\f104";
+}
+.flaticon-restaurant:before {
+    content: "\f105";
+}
+.flaticon-coffee-cup:before {
+    content: "\f106";
+}
+.flaticon-dessert:before {
+    content: "\f107";
+}
+.flaticon-cake:before {
+    content: "\f108";
+}
+.flaticon-email:before {
+    content: "\f109";
+}
+.flaticon-telephone:before {
+    content: "\f10a";
+}
+.flaticon-placeholder:before {
+    content: "\f10b";
+}
+.flaticon-share:before {
+    content: "\f10c";
+}
+.flaticon-right-quote:before {
+    content: "\f10d";
+}
+.flaticon-user:before {
+    content: "\f10e";
+}
+.flaticon-phone-call:before {
+    content: "\f10f";
+}
+.flaticon-email-1:before {
+    content: "\f110";
+}
+.flaticon-two-people:before {
+    content: "\f111";
+}
+.flaticon-calendar-date:before {
+    content: "\f112";
+}
+.flaticon-clock:before {
+    content: "\f113";
+}
+.flaticon-shopping-cart:before {
+    content: "\f114";
+}
+.flaticon-offer:before {
+    content: "\f115";
+}
+.flaticon-hamburger:before {
+    content: "\f116";
+}
+.flaticon-room-service:before {
+    content: "\f117";
+}
+.flaticon-martini:before {
+    content: "\f118";
+}
+.flaticon-burger:before {
+    content: "\f119";
+}
+.flaticon-fast-food:before {
+    content: "\f11a";
+}
+.flaticon-pizza-slice:before {
+    content: "\f11b";
+}
+.flaticon-salad:before {
+    content: "\f11c";
+}
+.flaticon-cupcake:before {
+    content: "\f11d";
+}
+.flaticon-chili-pepper:before {
+    content: "\f11e";
+}
+.flaticon-hamburger-1:before {
+    content: "\f11f";
+}
+.flaticon-fast-delivery:before {
+    content: "\f120";
+}
+.flaticon-clock-1:before {
+    content: "\f121";
+}
+.flaticon-chef:before {
+    content: "\f122";
+}
+.flaticon-pot:before {
+    content: "\f123";
+}
+.flaticon-juice:before {
+    content: "\f124";
+}
+.flaticon-burger-1:before {
+    content: "\f125";
+}
+.flaticon-pizza:before {
+    content: "\f126";
+}
+.flaticon-cake-slice:before {
+    content: "\f127";
+}
+.flaticon-pizza-box:before {
+    content: "\f128";
+}
+.flaticon-vegetable:before {
+    content: "\f129";
+}
+.flaticon-chef-hat:before {
+    content: "\f12a";
+}
+.flaticon-cocktail:before {
+    content: "\f12b";
+}
+.flaticon-cuisine:before {
+    content: "\f12c";
+}
+.flaticon-support:before {
+    content: "\f12d";
+}
+.flaticon-dinner-table:before {
+    content: "\f12e";
+}
+.flaticon-token:before {
+    content: "\f12f";
+}
+.flaticon-furniture:before {
+    content: "\f130";
+}
+.flaticon-team:before {
+    content: "\f131";
+}
+.flaticon-scooter:before {
+    content: "\f132";
+}
+.flaticon-shopping-bag:before {
+    content: "\f133";
+}
+.flaticon-shopping-bag-1:before {
+    content: "\f134";
+}
+.flaticon-chat-bubble:before {
+    content: "\f135";
+}

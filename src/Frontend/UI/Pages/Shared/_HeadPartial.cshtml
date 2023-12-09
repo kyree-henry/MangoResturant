@@ -1,29 +1,162 @@
-﻿@model string
-
+﻿
 <head>
+    <!-- Meta -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="@@kyenry">
+    <meta name="robots" content="">
     <title>@ViewData["Title"] - Mango Restaurant </title>
 
-    <link rel="shortcut icon" href="assets/images/icon/fave.png" type="image/png">
-    <link rel="stylesheet" href="~/assets/auth/css/bootstrap.min.css">
+    <!-- Mobile Specific -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    @{
-        if (Model == "_AuthLayout")
-        {
-            <link rel="stylesheet" href="~/assets/auth/css/venobox.min.css">
-            <link rel="stylesheet" href="~/assets/auth/css/aos.css">
-            <link rel="stylesheet" href="~/assets/auth/css/slick.css">
-            <link rel="stylesheet" href="~/assets/auth/css/style.css">
-            <link rel="stylesheet" href="~/assets/auth/css/responsive.css">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" href="~/assets/main/images/favicon.png">
+
+    <!-- Stylesheet -->
+    <link href="~/assets/main/vendor/animate/animate.css" rel="stylesheet">
+    <link href="~/assets/main/vendor/magnific-popup/magnific-popup.min.css" rel="stylesheet">
+    <link href="~/assets/main/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="~/assets/main/vendor/bootstrap-select/css/bootstrap-select.min.css" rel="stylesheet">
+    <link href="~/assets/main/vendor/tempus-dominus/css/tempus-dominus.min.css" rel="stylesheet">
+    
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="~/assets/main/vendor/rangeslider/rangeslider.css">
+    <link rel="stylesheet" href="~/assets/main/vendor/switcher/switcher.css">
+    <link rel="stylesheet" href="~/assets/main/css/style.css">
+
+    <style>
+        .header-top {
+    position: relative;
+    background-color: #333333;
+}
+
+        .auto-container {
+            position: static;
+            max-width: 1200px;
+            padding: 0px 15px;
+            margin: 0 auto;
         }
-        else if (Model == "_Layout")
-        {
-            <link href="~/assets/main/css/style.css" rel="stylesheet">
-            <link href="~/assets/main/css/responsive.css" rel="stylesheet">
-            <link id="theme-color-file" href="~/assets/main/css/color-themes/default-theme.css" rel="stylesheet">
+
+        .header-top .top-inner {
+            position: relative;
         }
-    }
+
+            .header-top .top-inner:before{
+                position: absolute;
+                content: '';
+                top: 0px;
+                width: 100%;
+                right: 100%;
+                height: 46px;
+                margin-right: -270px;
+                background-color: #8b755a;
+            }
+
+            .header-top .top-inner:after {
+                border-bottom-color: #8b755a;
+            }
+
+            .header-top .top-inner:after {
+                position: absolute;
+                content: '';
+                top: -1px;
+                margin-left: 270px;
+                border-bottom: 47px solid #8b755a;
+                border-right: 40px solid transparent;
+            }
+
+        .header-top .top-left {
+            position: relative;
+            float: left;
+        }
+
+            .header-top .top-left ul li {
+                position: relative;
+                font-size: 15px;
+                color: #ffffff;
+                font-weight: 300;
+                padding: 9px 0px;
+                display: inline-block;
+                padding-right: 16px;
+                margin-right: 15px;
+            }
+
+                .header-top .top-left ul li.email a {
+                    color: #ffffff;
+                    font-weight: 300;
+                    letter-spacing: 1px;
+                    -webkit-transition: all 300ms ease;
+                    -ms-transition: all 300ms ease;
+                    -o-transition: all 300ms ease;
+                    -moz-transition: all 300ms ease;
+                    transition: all 300ms ease;
+                }
+
+                .header-top .top-left ul li:after {
+                    position: absolute;
+                    content: '';
+                    right: 0px;
+                    top: 15px;
+                    width: 1px;
+                    height: 13px;
+                    background-color: rgba(255,255,255,0.40);
+                }
+
+        .header-top .top-right {
+            position: relative;
+            float: right;
+            padding-bottom: 5px;
+        }
+
+            .header-top .top-right > ul > li {
+                position: relative;
+                margin-right: 10px;
+                font-size: 14px;
+                color: #bbbbbb;
+                padding: 9px 0px 8px;
+                padding-right: 12px;
+                display: inline-block;
+            }
+
+                .header-top .top-right > ul > li:last-child {
+                    margin-right: 0px;
+                    padding-right: 0px;
+                }
+
+        .header-top li.language {
+            top: -1px;
+        }
+
+                .header-top .top-right > ul > li > a {
+                    font-size: 15px;
+                    font-weight: 300;
+                    color: #ffffff;
+                    letter-spacing: 1px;
+                    -webkit-transition: all 300ms ease;
+                    -ms-transition: all 300ms ease;
+                    -o-transition: all 300ms ease;
+                    -moz-transition: all 300ms ease;
+                    transition: all 300ms ease;
+                }
+
+                .header-top .top-right > ul > li:after {
+                    position: absolute;
+                    content: '';
+                    right: 0px;
+                    top: 16px;
+                    width: 1px;
+                    height: 14px;
+                    background-color: rgba(255,255,255,0.20);
+                }
+
+    </style>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&amp;family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&amp;family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
 
     <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
     <!--[if lt IE 9]><script src="~/assets/main/js/respond.js"></script><![endif]-->

@@ -1,22 +1,22 @@
-﻿@{
-    string LayoutName = "_Layout";
-}
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
-<partial name="_HeadPartial" model="LayoutName" />
+<partial name="_HeadPartial" />
 @RenderSection("Styles", required: false)
 
-<body>
+<body id="bg">
+    <div id="loading-area" class="loading-page-3">
+        <img src="~/assets/main/images/loading.gif" alt="">
+    </div>
     <div class="page-wrapper">
-        <div class="preloader"></div>
-        <partial name="_HeaderPartial" model="LayoutName" />
+        <partial name="_HeaderPartial" />
 
-        @RenderBody()
+        <div class="page-content bg-white">
+            @RenderBody()
+        </div>
 
         <partial name="_FooterPartial" />
     </div>
-    <div class="scroll-to-top scroll-to-target" data-target="html"><span class="icon fa fa-angle-double-up"></span></div>
-    <partial name="_ScriptsPartial" model="LayoutName" />
+    <partial name="_ScriptsPartial" />
 
     @RenderSection("Scripts", required: false)
 </body>
