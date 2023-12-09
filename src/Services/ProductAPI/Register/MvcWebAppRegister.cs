@@ -18,10 +18,10 @@ namespace Mango.Services.ProductAPI.Register
 			});
 
 			app.UseHttpsRedirection();
-
 			app.UseRouting();
-
-			app.UseCors("OpenCorsPolicy");
+            app.UseAuthentication();
+            app.UseAuthorization();
+            app.UseCors("OpenCorsPolicy");
 
 			app.MapControllers();
 		}
